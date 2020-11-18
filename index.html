@@ -8,17 +8,21 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <script src="main.js"></script>
 </head>
-<body>
+<body onload="generarBotones()">
     <h1>Acceso Banca online</h1>
     <h2>Indica tu DNI y clave para acceder</h2>
     <form action="" method="post">
         <input type="text" placeholder="NIF / NIE" name="DNI" id="DNI">
         <br>
-        <input type="password" placeholder="Clave" name="clave" id="clave" disabled>
-        <div id="jquery">
+        <br>
+        <input type="password" placeholder="Clave" name="clave" id="clave" >
+        <br>
+        <br>
+        <Label>CLAVE</Label>
+        <div id="botonesNums" style="margin:20px;border: 1px solid black;width: 118px;height: 42px;">
 
         </div>
-        <input type="submit" value="Entrar">
+        <button value="Entrar" onclick="login()">Entrar</button>
     </form>
 </body>
 </html>
