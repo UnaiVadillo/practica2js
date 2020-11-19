@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica 2</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-    <script src="main.js"></script>
+    <title>Login - Practica 2</title>
+    
 </head>
+
 <body onload="generarBotones()">
     <h1>Acceso Banca online</h1>
     <h2>Indica tu DNI y clave para acceder</h2>
@@ -20,9 +19,11 @@
         <br>
         <Label>CLAVE</Label>
         <div id="botonesNums" style="margin:20px;border: 1px solid black;width: 118px;height: 42px;">
-
         </div>
-        <button value="Entrar" onclick="login()">Entrar</button>
     </form>
+    <button value="Entrar" id="login" onclick="login()">Entrar</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

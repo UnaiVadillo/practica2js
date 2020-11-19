@@ -1,8 +1,19 @@
+var usuarios = [];
 
-var perfil1  = {dni: "72849750X", contra:987654};
-var perfil2 = {dni: "89854398B", contra:123456};
-var cuentas = [];
-cuentas.push(perfil1,perfil2);
+$(document).ready(function(){
+    crearCuentasTransacciones();
+})
+
+function crearCuentasTransacciones(){
+
+    var cuenta1 = {}
+    var cuenta2 = {}
+    var perfil1  = {dni: "72849750X", contra:987654};
+    var perfil2 = {dni: "89854398B", contra:123456};
+
+    usuarios.push(perfil1,perfil2);
+}
+
 function generarBotones(){
     var numsClave = [0,1,2,3,4,5,6,7,8,9];
     numsClave = numsClave.sort(function() {return Math.random() - 0.5});
@@ -33,18 +44,15 @@ function crearClave(){
 }
 
 function login(){
-    let dni = $(':input#DNI');
-    let dnivalor = dni.val();
-
-    let clave = $(':input#clave').val();
-    if( cuentas.find(user => dnivalor == user.dni && clave == user.contra)){
+    let dnivalor = $('#DNI').val();
+    let clave = $('#clave').val();
+    console.log(usuarios.find(user => dnivalor == user.dni && clave == user.contra));
+    if(usuarios.find(user => dnivalor == user.dni && clave == user.contra)){
         alert("Login correcto");
-        dniCookie = dnivalor;
-        document.cookie = "dniLogged ="+dniCookie;
-        window.location = "banco.html";
+        document.cookie = "dniCookie="+dnivalor;
+        $(location).attr("href","banco.html");
+    }else{
+        alert("Login incorrecto");
     }
 
 }
-$(document).ready(function(){
-   
-});

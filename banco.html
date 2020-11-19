@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco</title>
+    <title>Banco - practica 2</title>
 </head>
 <body>
-    Estas dentro
+    <body onload="cargarDatos()">
+        <select id="cuentas" >
+        
+        </select><button id="cambiarCuenta" onclick="crearTabla()"> Cargar datos de esta cuenta</button>
+        <p>Ordenar por: </p>
+
+        <label for="fecha">Fecha </label>
+        <input type="radio" name="opt" id="fecha">
+
+        <br>
+
+        <label for="importe">Importe </label>
+        <input type="radio" name="opt" id="importe">
+
+        <br>
+
+        <table id="myTable" border="1">
+         
+        </table>
+
+
+<script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 </body>
+
 </html>
