@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco - practica 2</title>
 </head>
-<body>
-    <body onload="cargarDatos()">
+<body onload="mostrarCuentas()">
         <select id="cuentas" >
         
-        </select><button id="cambiarCuenta" onclick="crearTabla()"> Cargar datos de esta cuenta</button>
+        </select><button id="mostraCuenta" onclick="crearTabla()"> Visualizar datos de esta cuenta</button>
         <p>Ordenar por: </p>
 
         <label for="fecha">Fecha </label>
-        <input type="radio" name="opt" id="fecha">
+        <input type="radio" name="opt" id="fecha" onclick="crearTabla()">
 
         <br>
 
         <label for="importe">Importe </label>
-        <input type="radio" name="opt" id="importe">
+        <input type="radio" name="opt" id="importe" onclick="crearTabla()" >
 
         <br>
 
-        <table id="myTable" border="1">
-         
+        <table id="tablaMovimientos" border="1">
         </table>
 
 
