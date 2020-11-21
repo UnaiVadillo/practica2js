@@ -12,15 +12,16 @@
         <p>Ordenar por: </p>
 
         <label for="fecha">Fecha </label>
-        <input type="radio" name="opt" id="fecha" onclick="crearTabla()">
+        <input type="radio" name="opt" id="fecha">
 
         <br>
 
         <label for="importe">Importe </label>
-        <input type="radio" name="opt" id="importe" onclick="crearTabla()" >
+        <input type="radio" name="opt" id="importe" >
 
         <br>
 
+        <button id="ordernar" onclick="ordenarTablas()">Ordenar</button>
         <table id="tablaMovimientos" border="1">
         </table>
 
